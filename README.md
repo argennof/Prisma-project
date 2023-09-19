@@ -18,11 +18,9 @@ This repository contains the Python sources of the Prisma basic processing, base
 ## **Requirements:**
    - [x] matplotlib==3.7.1
    - [x] h5py==3.8.0
-   - [x] os
+   - [x] scipy
    - [x] numpy
-   - [x] sys ***
    - [x] scikit-image==0.20.0
-   - [x] functions_he5 as f_he5
    - [x] pyvsnr==1.0.0
  
 
@@ -44,7 +42,11 @@ This repository contains the Python sources of the Prisma basic processing, base
       $ pip install pyvsnr
   ```
 
-  5. Switch to the root path of thei project and add path to matlab 
+  4. Save the scripts: _Main_ and _functions_he5_ at the same directory.
+  5. Execute next command:
+ ```
+      $ python  main.py
+  ```
   
   ----
   ### How it works?:
