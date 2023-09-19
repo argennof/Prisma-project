@@ -25,7 +25,7 @@ This repository contains the Python sources of the Prisma basic processing, base
  
 
 ----
-# How to run?
+# How to run? 
 ----
   1. Create an environment, for instance:
   ```
@@ -41,11 +41,15 @@ This repository contains the Python sources of the Prisma basic processing, base
   ```
       $ pip install pyvsnr
   ```
+  or  If you use the requirements.txt file:
+  ```
+      $ pip install -r requirements.txt
+  ```
 
-  4. Save the scripts: _Main_ and _functions_he5_ at the same directory.
-  5. Execute next command:
+  4. Download the scripts available here ( _*main.py_ and _*functions_he5.py_ ) and save them into the same directory.
+  5. Then, execute in a terminal the next command:
  ```
-      $ python  main.py
+      $ python main.py
   ```
   
   ----
@@ -56,6 +60,7 @@ This repository contains the Python sources of the Prisma basic processing, base
   ----
   ### Usage
 For a single image processing :
+ 
   ``` python
 
 from pyvsnr import VSNR
@@ -82,7 +87,7 @@ img_corr = vsnr.eval(img, maxit=100, cvg_threshold=1e-4)
 
   ----
 #  Authors information
-This is a PORT***** to Python of the original Matlab code developed by:
+This is adapted to Python from the original Matlab codes developed by:
  - [x] Jérôme Fehrenbach and Pierre Weiss.
  - [x] José Bioucas-Dias and José Nascimento
 
