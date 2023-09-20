@@ -98,5 +98,5 @@ In case you use the results of this code with your article, please don't forget 
 
 - [x] Fehrenbach, Jérôme, Pierre Weiss, and Corinne Lorenzo. "Variational algorithms to remove stationary noise: applications to microscopy imaging." IEEE Transactions on Image Processing 21.10 (2012): 4420-4430.
 - [x] Fehrenbach, Jérôme, and Pierre Weiss. "Processing stationary noise: model and parameter selection in variational methods." SIAM Journal on Imaging Sciences 7.2 (2014): 613-640.
-- [x] *Escande, Paul, Pierre Weiss, and Wenxing Zhang. "A variational model for multiplicative structured noise removal." Journal of Mathematical Imaging and Vision 57.1 (2017): 43-55.
-- [x]  Bioucas-Dias, J. and  Nascimento, J.  "Hyperspectral subspace identification", IEEE Transactions on Geoscience and Remote Sensing, vol. 46, no. 8, pp. 2435-2445, 2008
+- [x] Escande, Paul, Pierre Weiss, and Wenxing Zhang. "A variational model for multiplicative structured noise removal." Journal of Mathematical Imaging and Vision 57.1 (2017): 43-55.
+- [x] Bioucas-Dias, J. and  Nascimento, J.  "Hyperspectral subspace identification", IEEE Transactions on Geoscience and Remote Sensing, vol. 46, no. 8, pp. 2435-2445, 2008
