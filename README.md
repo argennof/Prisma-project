@@ -23,6 +23,7 @@ This repository contains the Python sources of the Prisma basic processing, base
    - [x] numpy
    - [x] scikit-image==0.20.0
    - [x] pyvsnr==1.0.0
+   - [x] argparse
  
 
 ----
