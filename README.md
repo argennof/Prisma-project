@@ -3,7 +3,8 @@
 
 # ** "Implementazione di algoritmi numerico-statistici per la caratterizzazione e rimozione del rumore e per la cloud detection in immagini iperspettrali.” **
 ### Additive noise removal example:
-![image](https://github.com/argennof/Prisma-proyect/assets/11649711/e89c8483-92f9-4f41-b600-bcdbd5286fc1)
+![image](https://github.com/argennof/Prisma-proyect/assets/11649711/c0e57428-ca05-4da7-9b31-5a8507016270)
+
 ### Additive noise removal - zoom example:
 ![image](https://github.com/argennof/Prisma-proyect/assets/11649711/539ae08e-63de-491f-acdd-081db3c61bf2)
 
