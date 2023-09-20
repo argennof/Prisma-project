@@ -16,7 +16,7 @@
 This repository contains the Python sources of the Prisma basic processing, based denoising code of the VSNR algorithm originally coded in MATLAB - see the [Pierre Weiss website](https://www.math.univ-toulouse.fr/~weiss/PageCodes.html) & [pyvsnr](https://github.com/patquem/pyvsnr/tree/main) and HySime (hyperspectral signal subspace identiﬁcation by minimum error, algorithm originally coded in MATLAB) - see the [José Bioucas-Dias website](http://www.lx.it.pt/~bioucas/code.htm)
 
 
-## **Requirements:**
+## **Requirements**
    - [x] matplotlib==3.7.1
    - [x] h5py==3.8.0
    - [x] scipy
@@ -38,7 +38,7 @@ This repository contains the Python sources of the Prisma basic processing, base
   ```
       $ source env/bin/activate
   ```
-  3.  Install the requirements in the Virtual Environment, you can easily just pip install the libraries. Example:
+  3.  Install the requirements in the Virtual Environment, you can easily just pip install the libraries. For example:
   ```
       $ pip install pyvsnr
   ```
@@ -48,13 +48,13 @@ This repository contains the Python sources of the Prisma basic processing, base
   ```
 
   4. Download the scripts available here ( _*main.py_ and _*functions_he5.py_ ) and save them into the same directory.
-  5. Then, execute in a terminal the next command:
+  5. Then, execute the next command in a terminal:
  ```
       $ python main.py
   ```
   
   ----
-  ### How it works?:
+  ### How it works?
   
 ![image](https://github.com/argennof/Prisma-proyect/assets/11649711/05c072a4-b8d7-4be7-9000-21372e2bf280)
 
