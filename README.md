@@ -1,7 +1,7 @@
 # SAPP4VU: Sviluppo di Algoritmi prototipali Prisma per la Stima del Danno Ambientale e della Vulnerabilità alla Land Degradation
 ---- 
 
-# ** "Implementazione di algoritmi numerico-statistici per la caratterizzazione e rimozione del rumore e per la cloud detection in immagini iperspettrali.” **
+# 🚀 "Implementazione di algoritmi numerico-statistici per la caratterizzazione e rimozione del rumore e per la cloud detection in immagini iperspettrali.” **
 ### Additive noise removal example:
 ![image](https://github.com/argennof/Prisma-proyect/assets/11649711/c0e57428-ca05-4da7-9b31-5a8507016270)
 
@@ -59,36 +59,88 @@ This repository contains the Python sources of the Prisma basic processing, base
   
 ![image](https://github.com/argennof/Prisma-proyect/assets/11649711/05c072a4-b8d7-4be7-9000-21372e2bf280)
 
+```diff
+- h 
+```
+
+
+    Usage: 
+      underscore <command> [--in <filename>|--data <JSON>|--nodata] [--infmt <format>] [--out <filename>] [--outfmt <format>] [--quiet] [--strict] [--color] [--text] [--trace] [--coffee] [--js]
+  
+    
+  
+    Commands:
+  
+      help [command]      Print more detailed help and examples for a specific command
+      type                Print the type of the input data: {object, array, number, string, boolean, null, undefined}
+      print               Output the data without any transformations. Can be used to pretty-print JSON data.
+      pretty              Output the data without any transformations. Can be used to pretty-print JSON data. (defaults output format to 'pretty')
+      run <exp>           Runs arbitrary JS code. Use for CLI Javascripting.
+      process <exp>       Run arbitrary JS against the input data.  Expression Args: (data)
+      extract <field>     Extract a field from the input data.  Also supports field1.field2.field3
+      map <exp>           Map each value from a list/object through a transformation expression whose arguments are (value, key, list).'
+      reduce <exp>        Boil a list down to a single value by successively combining each element with a running total.  Expression args: (total, value, key, list)
+      reduceRight <exp>   Right-associative version of reduce. ie, 1 + (2 + (3 + 4)). Expression args: (total, value, key, list)
+      select <jselexp>    Run a 'JSON Selector' query against the input data. See jsonselect.org.
+      find <exp>          Return the first value for which the expression Return a truish value.  Expression args: (value, key, list)
+      filter <exp>        Return an array of all values that make the expression true.  Expression args: (value, key, list)
+      reject <exp>        Return an array of all values that make the expression false.  Expression args: (value, key, list)
+      flatten             Flattens a nested array (the nesting can be to any depth). If you pass '--shallow', the array will only be flattened a single level.
+      pluck <key>         Extract a single property from a list of objects
+      keys                Retrieve all the names of an object's properties.
+      values              Retrieve all the values of an object's properties.
+      extend <object>     Override properties in the input data.
+      defaults <object>   Fill in missing properties in the input data.
+      any <exp>           Return 'true' if any of the values in the input make the expression true.  Expression args: (value, key, list)
+      all <exp>           Return 'true' if all values in the input make the expression true.  Expression args: (value, key, list)
+      isObject            Return 'true' if the input data is an object with named properties
+      isArray             Return 'true' if the input data is an array
+      isString            Return 'true' if the input data is a string
+      isNumber            Return 'true' if the input data is a number
+      isBoolean           Return 'true' if the input data is a boolean, ie {true, false}
+      isNull              Return 'true' if the input data is the 'null' value
+      isUndefined         Return 'true' if the input data is undefined
+      template <filename> Process an underscore template and print the results. See 'help template'
+  
+  
+    Options:
+  
+      -h, --help            output usage information
+      -V, --version         output the version number
+      -i, --in <filename>   The data file to load.  If not specified, defaults to stdin.
+      --infmt <format>      The format of the input data. See 'help formats'
+      -o, --out <filename>  The output file.  If not specified, defaults to stdout.
+      --outfmt <format>     The format of the output data. See 'help formats'
+      -d, --data <JSON>     Input data provided in lieu of a filename
+      -n, --nodata          Input data is 'undefined'
+      -q, --quiet           Suppress normal output.  'console.log' will still trigger output.
+      --strict              Use strict JSON parsing instead of more lax 'eval' syntax.  To avoid security concerns, use this with ANY data from an external source.
+      --color               Colorize output
+      --text                Parse data as text instead of JSON. Sets input and output formats to 'text'
+      --trace               Print stack traces when things go wrong
+      --coffee              Interpret expression as CoffeeScript. See http://coffeescript.org/
+      --js                  Interpret expression as JavaScript. (default is "auto")
+  
+
+| Command | Description |
+| --- | --- |
+| `git status` | List all *new or modified* files |
+| `git diff` | Show file differences that **haven't been** staged |
+
+> :warning: **This is a Warning**: Description text here
+
+> :memo: **This is a Note**: Description text here
+
+> :bulb: **This is a Hint**: Description text here
+
+> :heavy_check_mark: **Check**: Description text here
+
+> :information_source: **Additional Information**: Description text here
+
+>   <img alt="Info" src="https://raw.githubusercontent.com/Mqxx/GitHub-Markdown/main/blockquotes/badge/dark-theme/info.svg">
+
   ----
-  ### Usage
-For a single image processing :
- 
-  ``` python
-
-from pyvsnr import VSNR
-from skimage import io
-
-# read the image to correct
-img = io.imread('my_image.tif')
-
-# vsnr object creation
-vsnr = VSNR(img.shape)
-
-# add filter (at least one !)
-vsnr.add_filter(alpha=1e-2, name='gabor', sigma=(1, 30), theta=20)
-vsnr.add_filter(alpha=5e-2, name='gabor', sigma=(3, 40), theta=20)
-
-# vsnr initialization
-vsnr.initialize()
-
-# image processing
-img_corr = vsnr.eval(img, maxit=100, cvg_threshold=1e-4)
-...
-  ```
-
-
-  ----
-#  Authors information
+# 📝 Authors information
 This is adapted to Python from the original Matlab codes developed by:
  - [x] Jérôme Fehrenbach and Pierre Weiss.
  - [x] José Bioucas-Dias and José Nascimento
