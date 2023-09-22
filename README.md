@@ -59,9 +59,7 @@ This repository contains the Python sources of the Prisma basic processing, base
   
 ![image](https://github.com/argennof/Prisma-proyect/assets/11649711/05c072a4-b8d7-4be7-9000-21372e2bf280)
 
-```diff
-- h 
-```
+```diff - h ```
 
 
     Usage: 
@@ -73,8 +71,6 @@ This repository contains the Python sources of the Prisma basic processing, base
   
       help [command]      Print more detailed help and examples for a specific command
       type                Print the type of the input data: {object, array, number, string, boolean, null, undefined}
-      print               Output the data without any transformations. Can be used to pretty-print JSON data.
-      pretty              Output the data without any transformations. Can be used to pretty-print JSON data. (defaults output format to 'pretty')
       run <exp>           Runs arbitrary JS code. Use for CLI Javascripting.
       process <exp>       Run arbitrary JS against the input data.  Expression Args: (data)
       extract <field>     Extract a field from the input data.  Also supports field1.field2.field3
