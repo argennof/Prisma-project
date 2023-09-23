@@ -106,7 +106,7 @@ This repository contains the Python sources of the Prisma basic processing, base
 
 ## :heavy_check_mark: **Examples**: 
 ```
-$ python3 main.py -if ./PRS_L1_STD_OFFL_20210922101425_20210922101429_0001.he5 -s HCO -sr SWIR -nt normal  h_d 0.1, -f_m 
+$ python3 main.py -if ./PRS_L1_STD_OFFL_20210922101425_20210922101429_0001.he5 -s HCO -sr SWIR -nt normal  -h_d 0.1, -f_m 
 
 $ python3 main.py -if ./PRS_L1_STD_OFFL_20210922101425_20210922101429_0001.he5 -s HRC -sr VNIR -nt additive 
 
