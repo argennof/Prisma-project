@@ -1,7 +1,7 @@
-# SAPP4VU: Sviluppo di Algoritmi prototipali Prisma per la Stima del Danno Ambientale e della Vulnerabilità alla Land Degradation
----- 
+# 🛰️ SAPP4VU: Sviluppo di Algoritmi prototipali Prisma per la Stima del Danno Ambientale e della Vulnerabilità alla Land Degradation
 
-# 🚀 "Implementazione di algoritmi numerico-statistici per la caratterizzazione e rimozione del rumore e per la cloud detection in immagini iperspettrali.” **
+## 🚀 "Implementazione di algoritmi numerico-statistici per la caratterizzazione e rimozione del rumore e per la cloud detection in immagini iperspettrali.” **
+
 ### Additive noise removal example:
 ![image](https://github.com/argennof/Prisma-proyect/assets/11649711/c0e57428-ca05-4da7-9b31-5a8507016270)
 
@@ -27,7 +27,7 @@ This repository contains the Python sources of the Prisma basic processing, base
  
 
 ----
-# How to run? 
+# 📡 How to run? 
 ----
   1. Create an environment, for instance:
   ```
@@ -59,81 +59,68 @@ This repository contains the Python sources of the Prisma basic processing, base
   
 ![image](https://github.com/argennof/Prisma-proyect/assets/11649711/05c072a4-b8d7-4be7-9000-21372e2bf280)
 
-```diff - h ```
-
 
     Usage: 
-      underscore <command> [--in <filename>|--data <JSON>|--nodata] [--infmt <format>] [--out <filename>] [--outfmt <format>] [--quiet] [--strict] [--color] [--text] [--trace] [--coffee] [--js]
-  
+      python3 main.py [-if <filename>] [-s {HRC (default), HCO}] [-sr {VNIR (default), SWIR}] 
+      [-nt {additive, poisson, normal}] [-ps] [-pd] [-h_d] [-f_m]
+
     
-  
-    Commands:
-  
-      help [command]      Print more detailed help and examples for a specific command
-      type                Print the type of the input data: {object, array, number, string, boolean, null, undefined}
-      run <exp>           Runs arbitrary JS code. Use for CLI Javascripting.
-      process <exp>       Run arbitrary JS against the input data.  Expression Args: (data)
-      extract <field>     Extract a field from the input data.  Also supports field1.field2.field3
-      map <exp>           Map each value from a list/object through a transformation expression whose arguments are (value, key, list).'
-      reduce <exp>        Boil a list down to a single value by successively combining each element with a running total.  Expression args: (total, value, key, list)
-      reduceRight <exp>   Right-associative version of reduce. ie, 1 + (2 + (3 + 4)). Expression args: (total, value, key, list)
-      select <jselexp>    Run a 'JSON Selector' query against the input data. See jsonselect.org.
-      find <exp>          Return the first value for which the expression Return a truish value.  Expression args: (value, key, list)
-      filter <exp>        Return an array of all values that make the expression true.  Expression args: (value, key, list)
-      reject <exp>        Return an array of all values that make the expression false.  Expression args: (value, key, list)
-      flatten             Flattens a nested array (the nesting can be to any depth). If you pass '--shallow', the array will only be flattened a single level.
-      pluck <key>         Extract a single property from a list of objects
-      keys                Retrieve all the names of an object's properties.
-      values              Retrieve all the values of an object's properties.
-      extend <object>     Override properties in the input data.
-      defaults <object>   Fill in missing properties in the input data.
-      any <exp>           Return 'true' if any of the values in the input make the expression true.  Expression args: (value, key, list)
-      all <exp>           Return 'true' if all values in the input make the expression true.  Expression args: (value, key, list)
-      isObject            Return 'true' if the input data is an object with named properties
-      isArray             Return 'true' if the input data is an array
-      isString            Return 'true' if the input data is a string
-      isNumber            Return 'true' if the input data is a number
-      isBoolean           Return 'true' if the input data is a boolean, ie {true, false}
-      isNull              Return 'true' if the input data is the 'null' value
-      isUndefined         Return 'true' if the input data is undefined
-      template <filename> Process an underscore template and print the results. See 'help template'
-  
-  
-    Options:
-  
-      -h, --help            output usage information
-      -V, --version         output the version number
-      -i, --in <filename>   The data file to load.  If not specified, defaults to stdin.
-      --infmt <format>      The format of the input data. See 'help formats'
-      -o, --out <filename>  The output file.  If not specified, defaults to stdout.
-      --outfmt <format>     The format of the output data. See 'help formats'
-      -d, --data <JSON>     Input data provided in lieu of a filename
-      -n, --nodata          Input data is 'undefined'
-      -q, --quiet           Suppress normal output.  'console.log' will still trigger output.
-      --strict              Use strict JSON parsing instead of more lax 'eval' syntax.  To avoid security concerns, use this with ANY data from an external source.
-      --color               Colorize output
-      --text                Parse data as text instead of JSON. Sets input and output formats to 'text'
-      --trace               Print stack traces when things go wrong
-      --coffee              Interpret expression as CoffeeScript. See http://coffeescript.org/
-      --js                  Interpret expression as JavaScript. (default is "auto")
-  
+    Commands and Options:
+    
+      -h, --help:
+       Output usage information
+      
+      -if, --input filename <filename>  _str, required_                  
+      The data file is to load in .he5 format. 
+   
+      -of, --output filename <filename>  _str, required_
+      The output file. Specify path and name. The output format will be in .he5 
+      
+      -s, --sensor {HRC (default), HCO}  _str, optional_
+      Select a specific sensor to process the information. It may be one of 
+      the following: HCO or HRC. Otherwise, the default option is ("HRC").
+      
+      -sr, --spectral_region {VNIR (default), SWIR}  _str, optional_               
+      Select a spectral region to process the information. It may be one of 
+      the following: VNIR or SWIR. Otherwise, the default option is ("VNIR"). _str, optional_
+      
+      -nt, --noise_type {additive, poisson, normal}  _str, required_
+      Select a noise type to process the information. It may be one of the following: additive, poisson or normal.
+      
+      -ps, --patch_size  _int, optional_ -> _Enabled for normal option_
+      Size of patches used for denoising. For more information see skimage.restoration.denoise_nl_means.
 
-| Command | Description |
-| --- | --- |
-| `git status` | List all *new or modified* files |
-| `git diff` | Show file differences that **haven't been** staged |
+      -pd, --patch_distance  _int, optional_ -> _Enabled for normal option_
+      Maximal distance in pixels where to search patches used for denoising. For more information see 
+      skimage.restoration.denoise_nl_means.
 
-> :warning: **This is a Warning**: Description text here
+      -h_d, --h_decay  _float, optional_ -> _Enabled for normal option_
+      Cut-off distance (in gray levels). The higher h, the more permissive one is in accepting patches. 
+      A higher h results in a smoother image, at the expense of blurring features. For a Gaussian noise 
+      of standard deviation sigma, a rule of thumb is to choose the value of h to be sigma of slightly 
+      less. For more information see skimage.restoration.denoise_nl_means.
+ 
+      -f_m, --fast_mode  _str, optional_ -> _Enabled for normal option_
+      Write -f_m, if you want to use fast_mode is True, a fast version of the non-local means algorithm is used.  
+      For more information see skimage.restoration.denoise_nl_means.
 
-> :memo: **This is a Note**: Description text here
 
-> :bulb: **This is a Hint**: Description text here
+## :heavy_check_mark: **Examples**: 
+```
+$ python3 main.py -if ./PRS_L1_STD_OFFL_20210922101425_20210922101429_0001.he5 -s HCO -sr SWIR -nt normal  h_d 0.1, -f_m 
 
-> :heavy_check_mark: **Check**: Description text here
+$ python3 main.py -if ./PRS_L1_STD_OFFL_20210922101425_20210922101429_0001.he5 -s HRC -sr VNIR -nt additive 
 
-> :information_source: **Additional Information**: Description text here
+$ python3 main.py -if ./PRS_L1_STD_OFFL_20210922101425_20210922101429_0001.he5 -s HRC -sr VNIR -nt poisson 
+```
 
+
+> <picture>
+>   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Mqxx/GitHub-Markdown/main/blockquotes/badge/light-theme/info.svg">
 >   <img alt="Info" src="https://raw.githubusercontent.com/Mqxx/GitHub-Markdown/main/blockquotes/badge/dark-theme/info.svg">
+> </picture><br>
+>
+> [skimage.restoration.denoise_nl_means](https://scikit-image.org/docs/stable/api/skimage.restoration.html#skimage.restoration.denoise_nl_means)
 
   ----
 # 📝 Authors information
