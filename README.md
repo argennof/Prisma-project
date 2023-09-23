@@ -15,6 +15,10 @@
 ## Description
 This repository contains the Python sources of the Prisma basic processing, based denoising code of the VSNR algorithm originally coded in MATLAB - see the [Pierre Weiss website](https://www.math.univ-toulouse.fr/~weiss/PageCodes.html) & [pyvsnr](https://github.com/patquem/pyvsnr/tree/main) and HySime (hyperspectral signal subspace identiﬁcation by minimum error, algorithm originally coded in MATLAB) - see the [José Bioucas-Dias website](http://www.lx.it.pt/~bioucas/code.htm)
 
+## How it works?
+  
+![image](https://github.com/argennof/Prisma-proyect/assets/11649711/05c072a4-b8d7-4be7-9000-21372e2bf280)
+
 
 ## **Requirements**
    - [x] matplotlib==3.7.1
@@ -49,18 +53,13 @@ This repository contains the Python sources of the Prisma basic processing, base
   ```
 
   4. Download the scripts available here ( _*main.py_ and _*functions_he5.py_ ) and save them into the same directory.
-  5. Then, execute the next command in a terminal:
+  5. Then, execute the next command in a terminal e.g.
  ```
-      $ python main.py
+      python3 main.py -if ./PRS_L1_STD_OFFL_20210922101425_20210922101429_0001.he5 -s HRC -sr VNIR -nt additive 
   ```
-  
   ----
-  ### How it works?
-  
-![image](https://github.com/argennof/Prisma-proyect/assets/11649711/05c072a4-b8d7-4be7-9000-21372e2bf280)
-
-
-    Usage: 
+ ## :bulb: Usage:
+     
       python3 main.py [-if <filename>] [-s {HRC (default), HCO}] [-sr {VNIR (default), SWIR}] 
       [-nt {additive, poisson, normal}] [-ps] [-pd] [-h_d] [-f_m]
 
@@ -70,37 +69,37 @@ This repository contains the Python sources of the Prisma basic processing, base
       -h, --help:
        Output usage information
       
-      -if, --input filename <filename>  _str, required_                  
+      -if, --input filename <filename>, string, required.                 
       The data file is to load in .he5 format. 
    
-      -of, --output filename <filename>  _str, required_
+      -of, --output filename <filename>, string, required.
       The output file. Specify path and name. The output format will be in .he5 
       
-      -s, --sensor {HRC (default), HCO}  _str, optional_
+      -s, --sensor {HRC (default), HCO}, string, optional.
       Select a specific sensor to process the information. It may be one of 
       the following: HCO or HRC. Otherwise, the default option is ("HRC").
       
-      -sr, --spectral_region {VNIR (default), SWIR}  _str, optional_               
+      -sr, --spectral_region {VNIR (default), SWIR}, string, optional.               
       Select a spectral region to process the information. It may be one of 
-      the following: VNIR or SWIR. Otherwise, the default option is ("VNIR"). _str, optional_
+      the following: VNIR or SWIR. Otherwise, the default option is ("VNIR"), string, optional.
       
-      -nt, --noise_type {additive, poisson, normal}  _str, required_
+      -nt, --noise_type {additive, poisson, normal}, string, required.
       Select a noise type to process the information. It may be one of the following: additive, poisson or normal.
       
-      -ps, --patch_size  _int, optional_ -> _Enabled for normal option_
+      -ps, --patch_size  integer, optional -> Enabled for normal option.
       Size of patches used for denoising. For more information see skimage.restoration.denoise_nl_means.
 
-      -pd, --patch_distance  _int, optional_ -> _Enabled for normal option_
+      -pd, --patch_distance, integer, optional -> Enabled for normal option.
       Maximal distance in pixels where to search patches used for denoising. For more information see 
       skimage.restoration.denoise_nl_means.
 
-      -h_d, --h_decay  _float, optional_ -> _Enabled for normal option_
+      -h_d, --h_decay, float, optional -> Enabled for normal option.
       Cut-off distance (in gray levels). The higher h, the more permissive one is in accepting patches. 
       A higher h results in a smoother image, at the expense of blurring features. For a Gaussian noise 
       of standard deviation sigma, a rule of thumb is to choose the value of h to be sigma of slightly 
       less. For more information see skimage.restoration.denoise_nl_means.
  
-      -f_m, --fast_mode  _str, optional_ -> _Enabled for normal option_
+      -f_m, --fast_mode,string, optional -> Enabled for normal option
       Write -f_m, if you want to use fast_mode is True, a fast version of the non-local means algorithm is used.  
       For more information see skimage.restoration.denoise_nl_means.
 
