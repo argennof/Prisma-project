@@ -72,8 +72,8 @@ This repository contains the Python sources of the Prisma basic processing, base
       -if, --input filename <filename>, string, required.                 
       The data file is to load in .he5 format. 
    
-      -of, --output filename <filename>, string, required.
-      The output file. Specify path and name. The output format will be in .he5 
+      -op, --output path <directory>, string, optional.
+      Output path for denoised images. The output format will be in .he5 
       
       -s, --sensor {HRC (default), HCO}, string, optional.
       Select a specific sensor to process the information. It may be one of 
