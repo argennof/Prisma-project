@@ -2,15 +2,8 @@
 
 ## 🚀 "Implementazione di algoritmi numerico-statistici per la caratterizzazione e rimozione del rumore e per la cloud detection in immagini iperspettrali.” 
 
-### Additive noise removal example:
-![image](https://github.com/argennof/Prisma-proyect/assets/11649711/c0e57428-ca05-4da7-9b31-5a8507016270)
-
 ### Additive noise removal - zoom example:
 ![image](https://github.com/argennof/Prisma-proyect/assets/11649711/539ae08e-63de-491f-acdd-081db3c61bf2)
-
-### Poisson noise removal example:
-![image](https://github.com/argennof/Prisma-proyect/assets/11649711/dfc7823c-4781-45ef-8f9b-d1ba111301dd)
-
 
 ## Description
 This repository contains the Python sources of the Prisma basic processing, based denoising code of the VSNR algorithm originally coded in MATLAB - see the [Pierre Weiss website](https://www.math.univ-toulouse.fr/~weiss/PageCodes.html) & [pyvsnr](https://github.com/patquem/pyvsnr/tree/main) and HySime (hyperspectral signal subspace identiﬁcation by minimum error, algorithm originally coded in MATLAB) - see the [José Bioucas-Dias website](http://www.lx.it.pt/~bioucas/code.htm)
