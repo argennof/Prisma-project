@@ -103,8 +103,14 @@ This repository contains the Python sources of the Prisma basic processing, base
       Write -f_m, if you want to use fast_mode is True, a fast version of the non-local means algorithm is used.  
       For more information see skimage.restoration.denoise_nl_means.
 
+> <picture>
+>   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Mqxx/GitHub-Markdown/main/blockquotes/badge/light-theme/info.svg">
+>   <img alt="Info" src="https://raw.githubusercontent.com/Mqxx/GitHub-Markdown/main/blockquotes/badge/dark-theme/info.svg">
+> </picture><br>
+>
+> [skimage.restoration.denoise_nl_means](https://scikit-image.org/docs/stable/api/skimage.restoration.html#skimage.restoration.denoise_nl_means)
 
-## :heavy_check_mark: **Examples**: 
+## :heavy_check_mark: **More examples**: 
 1. If you choose HCO - VNIR - Normal - Fast mode: 
 ```
 $ python3 main.py -if ./PRS_L1_STD_OFFL_20210922101425_20210922101429_0001.he5 -s HCO -sr SWIR -nt normal  -h_d 0.1, -f_m 
@@ -117,15 +123,6 @@ $ python3 main.py -if ./PRS_L1_STD_OFFL_20210922101425_20210922101429_0001.he5 -
 ```
 $ python3 main.py -if ./PRS_L1_STD_OFFL_20210922101425_20210922101429_0001.he5 -s HRC -sr VNIR -nt poisson 
 ```
-
-
-> <picture>
->   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Mqxx/GitHub-Markdown/main/blockquotes/badge/light-theme/info.svg">
->   <img alt="Info" src="https://raw.githubusercontent.com/Mqxx/GitHub-Markdown/main/blockquotes/badge/dark-theme/info.svg">
-> </picture><br>
->
-> [skimage.restoration.denoise_nl_means](https://scikit-image.org/docs/stable/api/skimage.restoration.html#skimage.restoration.denoise_nl_means)
-
   ----
 # 📝 Authors information
 This is adapted to Python from the original Matlab codes developed by:
