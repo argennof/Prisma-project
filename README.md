@@ -111,18 +111,29 @@ This repository contains the Python sources of the Prisma basic processing, base
 > [skimage.restoration.denoise_nl_means](https://scikit-image.org/docs/stable/api/skimage.restoration.html#skimage.restoration.denoise_nl_means)
 
 ## :heavy_check_mark: **More examples**: 
-1. If you choose HCO - VNIR - Normal - Fast mode: 
-```
-$ python3 main.py -if ./PRS_L1_STD_OFFL_20210922101425_20210922101429_0001.he5 -s HCO -sr SWIR -nt normal  -h_d 0.1, -f_m 
-```
-2. If you choose HCO - VNIR - Additive and Output path: 
+1. If you choose HCO - VNIR - Additive and Output path: 
 ```
 $ python3 main.py -if ./PRS_L1_STD_OFFL_20210922101425_20210922101429_0001.he5 -s HCO -sr VNIR -nt additive -op ./Results/
 ```
-3. If you choose HRC - VNIR - Poisson: 
+### Additive noise removal example:
+![image](https://github.com/argennof/Prisma-proyect/assets/11649711/c0e57428-ca05-4da7-9b31-5a8507016270)
+
+### Additive noise removal - zoom example:
+![image](https://github.com/argennof/Prisma-proyect/assets/11649711/539ae08e-63de-491f-acdd-081db3c61bf2)
+
+
+2. If you choose HRC - VNIR - Poisson: 
 ```
 $ python3 main.py -if ./PRS_L1_STD_OFFL_20210922101425_20210922101429_0001.he5 -s HRC -sr VNIR -nt poisson 
 ```
+### Poisson noise removal result:
+![image](https://github.com/argennof/Prisma-proyect/assets/11649711/dfc7823c-4781-45ef-8f9b-d1ba111301dd)
+
+3. If you choose HCO - VNIR - Normal - Fast mode: 
+```
+$ python3 main.py -if ./PRS_L1_STD_OFFL_20210922101425_20210922101429_0001.he5 -s HCO -sr SWIR -nt normal  -h_d 0.1, -f_m 
+```
+
   ----
 # 📝 Authors information
 This is adapted to Python from the original Matlab codes developed by:
