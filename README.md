@@ -72,6 +72,9 @@ This repository contains the Python sources of the Prisma basic processing, base
       -sr, --spectral_region {VNIR (default), SWIR}, string, optional.               
       Select a spectral region to process the information. It may be one of 
       the following: VNIR or SWIR. Otherwise, the default option is ("VNIR"), string, optional.
+
+      -su,--suffix  <suffix> (default),string, optional.
+      Suffix for filename output.
       
       -nt, --noise_type {additive, poisson, normal}, string, required.
       Select a noise type to process the information. It may be one of the following: additive, poisson or normal.
@@ -92,6 +95,8 @@ This repository contains the Python sources of the Prisma basic processing, base
       -f_m, --fast_mode,string, optional -> Enabled for normal option
       Write -f_m, if you want to use fast_mode is True, a fast version of the non-local means algorithm is used.  
       For more information see skimage.restoration.denoise_nl_means.
+
+      
 
 > <picture>
 >   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Mqxx/GitHub-Markdown/main/blockquotes/badge/light-theme/info.svg">
