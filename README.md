@@ -60,7 +60,7 @@ This repository contains the Python sources of the Prisma basic processing, base
        Output usage information
       
       -if, --input filename <filename>, string, required.                 
-      The data file is to load in .he5 format. 
+      The data file to process. It must be loaded in .he5 format. 
    
       -op, --output path <directory>, string, optional.
       Output path for denoised images. The output format will be in .he5 
@@ -79,22 +79,22 @@ This repository contains the Python sources of the Prisma basic processing, base
       -nt, --noise_type {additive, poisson, normal}, string, required.
       Select a noise type to process the information. It may be one of the following: additive, poisson or normal.
       
-      -ps, --patch_size  integer, optional -> Enabled for normal option.
+      -ps, --patch_size  integer, optional -> Enabled only for normal option.
       Size of patches used for denoising. For more information see skimage.restoration.denoise_nl_means.
 
-      -pd, --patch_distance, integer, optional -> Enabled for normal option.
+      -pd, --patch_distance, integer, optional -> Enabled only for normal option.
       Maximal distance in pixels where to search patches used for denoising. For more information see 
       skimage.restoration.denoise_nl_means.
 
-      -h_d, --h_decay, float, optional -> Enabled for normal option.
+      -h_d, --h_decay, float, optional -> Enabled only for normal option.
       Cut-off distance (in gray levels). The higher h, the more permissive one is in accepting patches. 
       A higher h results in a smoother image, at the expense of blurring features. For a Gaussian noise 
       of standard deviation sigma, a rule of thumb is to choose the value of h to be sigma of slightly 
       less. For more information see skimage.restoration.denoise_nl_means.
  
-      -f_m, --fast_mode,string, optional -> Enabled for normal option
-      Write -f_m, if you want to use fast_mode is True, a fast version of the non-local means algorithm is used.  
-      For more information see skimage.restoration.denoise_nl_means.
+      -f_m, --fast_mode,string, optional -> Enabled only for normal option.
+      Write -f_m, if you want to make fast_mode=True. 
+      A fast version of the non-local means algorithm is used. For more information see skimage.restoration.denoise_nl_means.
 
       
 
