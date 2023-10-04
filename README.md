@@ -43,7 +43,7 @@ This repository contains the Python sources of the Prisma basic processing, base
   ```
 
   4. Download the scripts available here ( _*main.py_ and _*functions_he5.py_ ) and save them into the same directory.
-  5. Then, execute the next command in a terminal e.g.
+  5. Then, once at the directory, execute the next command in a terminal e.g.
  ```
       $ python3 main.py -if ./PRS_L1_STD_OFFL_20210922101425_20210922101429_0001.he5 -s HRC -sr VNIR -nt additive 
   ```
