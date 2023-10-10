@@ -122,7 +122,7 @@ $ python3 main.py -if ./PRS_L1_STD_OFFL_20210922101425_20210922101429_0001.he5 -
 
 3. If you choose HCO - VNIR - Normal - Fast mode: 
 ```
-$ python3 main.py -if ./PRS_L1_STD_OFFL_20210922101425_20210922101429_0001.he5 -s HCO -sr SWIR -nt normal  -h_d 0.1, -f_m 
+$ python3 main.py -if ./PRS_L1_STD_OFFL_20210922101425_20210922101429_0001.he5 -s HCO -sr SWIR -nt normal -h_d 0.1 -f_m 
 ```
 
   ----
