@@ -56,7 +56,7 @@ This repository contains the Python sources of the Prisma basic processing, base
     
     Commands and Options:
     
-      -h, --help:
+      --h, --help:
        Output usage information
       
       -if, --input filename <filename>, string, required.                 
@@ -125,6 +125,10 @@ $ python3 main.py -if ./PRS_L1_STD_OFFL_20210922101425_20210922101429_0001.he5 -
 $ python3 main.py -if ./PRS_L1_STD_OFFL_20210922101425_20210922101429_0001.he5 -s HCO -sr SWIR -nt normal -hd 0.1 -f_m 
 ```
 
+Get some help:
+```
+$ python3 main.py  --help
+```
   ----
 # 📝 Authors information
 This is adapted to Python from the original Matlab codes developed by:
