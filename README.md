@@ -86,7 +86,7 @@ This repository contains the Python sources of the Prisma basic processing, base
       Maximal distance in pixels where to search patches used for denoising. For more information see 
       skimage.restoration.denoise_nl_means.
 
-      -h_d, --h_decay, float, optional -> Enabled only for normal option.
+      -hd, --h_decay, float, optional -> Enabled only for normal option.
       Cut-off distance (in gray levels). The higher h, the more permissive one is in accepting patches. 
       A higher h results in a smoother image, at the expense of blurring features. For a Gaussian noise 
       of standard deviation sigma, a rule of thumb is to choose the value of h to be sigma of slightly 
@@ -122,7 +122,7 @@ $ python3 main.py -if ./PRS_L1_STD_OFFL_20210922101425_20210922101429_0001.he5 -
 
 3. If you choose HCO - VNIR - Normal - Fast mode: 
 ```
-$ python3 main.py -if ./PRS_L1_STD_OFFL_20210922101425_20210922101429_0001.he5 -s HCO -sr SWIR -nt normal -h_d 0.1 -f_m 
+$ python3 main.py -if ./PRS_L1_STD_OFFL_20210922101425_20210922101429_0001.he5 -s HCO -sr SWIR -nt normal -hd 0.1 -f_m 
 ```
 
   ----
