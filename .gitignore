@@ -1,0 +1,13 @@
+# Project
+.env
+
+# data
+data
+
+#scripts
+scripts/__pycache__/
+scripts/georeference_prisma.py
+scripts/plots_example.py
+scripts/profiles.py
+scripts/save_mask.py
+
