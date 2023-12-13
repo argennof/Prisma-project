@@ -113,9 +113,9 @@ $ python3 main.py -if ./PRS_L1_STD_OFFL_20210922101425_20210922101429_0001.he5 -
 ### Additive noise removal example:
 ![image](https://github.com/argennof/Prisma-proyect/assets/11649711/c0e57428-ca05-4da7-9b31-5a8507016270)
 
-2. If you choose HRC - VNIR - Poisson: 
+2. If you choose HCO - VNIR - Poisson: 
 ```
-$ python3 main.py -if ./PRS_L1_STD_OFFL_20210922101425_20210922101429_0001.he5 -s HRC -sr VNIR -nt poisson 
+$ python3 main.py -if ./PRS_L1_STD_OFFL_20210922101425_20210922101429_0001.he5 -s HCO -sr VNIR -nt poisson 
 ```
 ### Poisson noise removal result:
 ![image](https://github.com/argennof/Prisma-proyect/assets/11649711/dfc7823c-4781-45ef-8f9b-d1ba111301dd)
